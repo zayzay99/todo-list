@@ -23,7 +23,6 @@
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
                 <td>{{$todo->keterangan}}</td> 
-                <td> <a hre</td>
          </tr>       
             @endforeach
     </table>
