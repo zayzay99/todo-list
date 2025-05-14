@@ -23,6 +23,7 @@
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
                 <td>{{$todo->keterangan}}</td> 
+               <td><a href=""></a>Keterangan</td> 
          </tr>       
             @endforeach
     </table>
