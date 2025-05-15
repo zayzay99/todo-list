@@ -32,4 +32,17 @@ class TodoController extends Controller
             'detailTodo' => $tugas
         ]);
     }
+
+    public function hapusTugas($id){
+        DB::table('tb_todo')
+        ->where('id', $id)
+        ->delete();
+
+        $dataTodo = DB::table('tb_todo')
+        ->get();
+
+        return view('pengguna.index',[
+            'dataTodo' => $dataTodo
+        ]);
+    }
 }
