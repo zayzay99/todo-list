@@ -19,7 +19,7 @@
         @php
             $i=0;
         @endphp
-         @foreach ($datatodo as $todo)
+         @foreach ($dataTodo as $todo)
          <tr>
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
