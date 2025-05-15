@@ -23,7 +23,9 @@
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
                 <td>{{$todo->keterangan}}</td> 
-               <td><a href="/pengguna/detailTugas"> Detail</td> 
+               <td><a href="/pengguna/detailTugas"> Detail</a>
+               <a href="/tugas/hapusTugas">Hapus</a> </td> 
+
          </tr>       
             @endforeach
     </table>
