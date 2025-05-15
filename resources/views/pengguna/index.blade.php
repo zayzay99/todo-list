@@ -7,6 +7,9 @@
     <title>TODOLIST</title>
 </head>
 <body>
+    Data Pengguna
+    <br>   
+ <a href="/tugas/tambahTugas">Tambah Tugas</a>
     <table border="1">
 
         <tr>
@@ -19,14 +22,14 @@
         @php
             $i=0;
         @endphp
-         @foreach ($dataTodo as $todo)
+         @foreach ($dataTodos as $todo)
          <tr>
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
                 <td>{{$todo->tugas_dari}}</td>
                 <td>{{$todo->keterangan}}</td> 
-               <td><a href="/pengguna/detailTugas/{{$todo->id}}"> Detail</a>
-               <a href="/tugas/hapusTugas/{{$todo->id}} ">Hapus</a> </td> 
+               <td><a href="/tugas/detailTugas/{{ $todo->id }}">Detail Tugas</a> |</td>
+              <td><a href="/tugas/hapusTugas/{{$todo->id}} ">Hapus</a></td> 
 
          </tr>       
             @endforeach

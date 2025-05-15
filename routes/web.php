@@ -10,3 +10,5 @@ Route::get('/', function () {
 Route::get('/pengguna/index', [PenggunaController::class,'login']);
 Route::get('/tugas/detailTugas/{id}',[TodoController::class,'detailTugas']);
 Route::get('/tugas/hapusTugas/{id}',[TodoController::class,'hapusTugas']);
+
+Route::get('/tugas/tambahTugas', [TodoController::class, 'tambahTugas']);

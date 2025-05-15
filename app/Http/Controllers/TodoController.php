@@ -19,7 +19,7 @@ class TodoController extends Controller
         ->get();
 
         return view('pengguna.index', [
-            'dataTodo' => $dataTodo
+            'dataTodos' => $dataTodo
         ]);
     }
 
@@ -29,7 +29,7 @@ class TodoController extends Controller
         ->get();
 
         return view('pengguna.detailTugas', [
-            'detailTodo' => $tugas
+            'detailTugas' => $tugas
         ]);
     }
 
@@ -38,11 +38,24 @@ class TodoController extends Controller
         ->where('id', $id)
         ->delete();
 
-        $dataTodo = DB::table('tb_todo')
+        $dataTodos = DB::table('tb_todo')
         ->get();
 
         return view('pengguna.index',[
-            'dataTodo' => $dataTodo
+            'dataTodos' => $dataTodos
+        ]);
+    }
+
+     public function tambahTugas() {
+        $pemberiTugas = DB::table('tb_pegawai')
+                        ->where('jabatan','=', 'CEO')
+                        ->get();
+        $pelaksanaTugas = DB::table('tb_pegawai')
+                        ->where('jabatan','!=', 'CEO')
+                        ->get();
+        return view('pengguna.tambahTugas', [
+            'pemberiTugas' => $pemberiTugas,
+            'pelaksanaTugas' => $pelaksanaTugas
         ]);
     }
 }

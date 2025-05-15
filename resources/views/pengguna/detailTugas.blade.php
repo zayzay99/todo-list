@@ -15,7 +15,7 @@
         @php
             $i=0;
         @endphp
-        @foreach ($detailTodo as $todo)
+        @foreach ($detailTugas as $todo)
             <tr><td>id {{$todo->id}}</td></tr>
             <tr><td>Nama {{$todo->tugas}}</td></tr>
             <tr><td>Waktu Mulai {{$todo->waktu_mulai}}</td></tr>
