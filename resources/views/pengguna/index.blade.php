@@ -12,6 +12,7 @@
         <tr>
             <td>id</td>
             <td>Nama tugas</td>
+            <td>Tugas Dari</td></td>
             <td>Keterangan</td>
             <td>Aksi</td>
         </tr>
@@ -22,6 +23,7 @@
          <tr>
                 <td>{{$todo->id}}</td> 
                 <td>{{$todo->tugas}}</td> 
+                <td>{{$todo->tugas_dari}}</td>
                 <td>{{$todo->keterangan}}</td> 
                <td><a href="/pengguna/detailTugas/{{$todo->id}}"> Detail</a>
                <a href="/tugas/hapusTugas/{{$todo->id}} ">Hapus</a> </td> 
