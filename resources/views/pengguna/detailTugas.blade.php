@@ -7,10 +7,33 @@
     <title>Detail</title>
 </head>
 <body>
-    
+     Informasi Penugasan 
     <table>
         
-        
+        {{-- <tr>
+            <td>Tugas</td>
+            <td>{{ $detailTodo->tugas }}</td>
+        </tr>
+        <tr>
+            <td>Waktu Ditugaskan</td>
+            <td>{{ $detailTodo->waktu_mulai }}</td>
+        </tr>
+        <tr>
+            <td>Waktu Selesai</td>
+            <td>{{ $detailTodo->waktu_selesai }}</td>
+        </tr>
+        <tr>
+            <td>Tugas Dari</td>
+            <td>{{ $detailTodo->tugas_dari }}</td>
+        </tr>
+        <tr>
+            <td>Tugas Untuk</td>
+            <td>{{ $detailTodo->tugas_untuk }}</td>
+        </tr>
+        <tr>
+            <td>Keterangan</td>
+            <td>{{ $detailTodo->keterangan }}</td>
+        </tr> --}}
 
         @php
             $i=0;

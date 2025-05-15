@@ -10,6 +10,6 @@ Route::get('/', function () {
 Route::get('/pengguna/index', [PenggunaController::class,'login']);
 Route::get('/tugas/detailTugas/{id}',[TodoController::class,'detailTugas']);
 Route::get('/tugas/hapusTugas/{id}',[TodoController::class,'hapusTugas']);
-
+Route::get('/lihatData', [TodoController::class, 'tampilkanTodo']);
 Route::get('/tugas/tambahTugas', [TodoController::class, 'tambahTugas']);
 Route::post('/tugas/simpanTugasBaru', [TodoController::class, 'simpanTugas']);
