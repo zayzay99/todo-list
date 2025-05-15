@@ -12,3 +12,4 @@ Route::get('/tugas/detailTugas/{id}',[TodoController::class,'detailTugas']);
 Route::get('/tugas/hapusTugas/{id}',[TodoController::class,'hapusTugas']);
 
 Route::get('/tugas/tambahTugas', [TodoController::class, 'tambahTugas']);
+Route::post('/tugas/simpanTugasBaru', [TodoController::class, 'simpanTugas']);

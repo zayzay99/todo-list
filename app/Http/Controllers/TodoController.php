@@ -45,7 +45,6 @@ class TodoController extends Controller
             'dataTodos' => $dataTodos
         ]);
     }
-
      public function tambahTugas() {
         $pemberiTugas = DB::table('tb_pegawai')
                         ->where('jabatan','=', 'CEO')
@@ -57,5 +56,19 @@ class TodoController extends Controller
             'pemberiTugas' => $pemberiTugas,
             'pelaksanaTugas' => $pelaksanaTugas
         ]);
+    }
+
+    public function simpanTugas(Request $request) {
+        DB::table('tb_todo') //simpan dalam database
+        ->insert([
+            'tugas' => $request->namaTugas,
+            'waktu_mulai' => $request->mulaiTugas,
+            'waktu_selesai' => $request->selesaiTugas,
+            'tugas_dari'=> $request->tugasDari,
+            'tugas_untuk'=> $request->tugasUntuk,
+            'keterangan' => $request->keteranganTugas 
+        ]);
+
+        return "Penyimpanan berhasil!";
     }
 }
