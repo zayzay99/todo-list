@@ -12,4 +12,5 @@ Route::get('/tugas/detailTugas/{id}',[TodoController::class,'detailTugas']);
 Route::get('/tugas/hapusTugas/{id}',[TodoController::class,'hapusTugas']);
 Route::get('/lihatData', [TodoController::class, 'tampilkanTodo']);
 Route::get('/tugas/tambahTugas', [TodoController::class, 'tambahTugas']);
+Route::get('/tugas/ubahTugas', [TodoController::class, 'ubahTugas']);
 Route::post('/tugas/simpanTugasBaru', [TodoController::class, 'simpanTugas']);

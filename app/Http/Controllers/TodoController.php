@@ -71,4 +71,9 @@ class TodoController extends Controller
 
         return "Penyimpanan berhasil!";
     }
+
+    public function ubahTugas(Request $request){
+        
+        return "Halaman UbahTugas NOT FOUND";
+    }
 }

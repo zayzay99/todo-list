@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Link</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
-    <center>
-        <a href="/pengguna/index">Log In Pengguna</a><br>
-        <a href="/lihatData/index">Lihat Data</a>
-    </center>
     
 </body>
 </html>

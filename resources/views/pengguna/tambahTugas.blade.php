@@ -6,6 +6,7 @@
     <title>Tambah Tugas</title>
 </head>
 <body>
+  
     {{-- {{ $dataPegawais}} --}}
     <form action="/tugas/simpanTugasBaru" method="post">
         @csrf
@@ -52,6 +53,10 @@
             <td></td>
             <td><input type="submit" value="Simpan"></td>
             
+        </tr>
+        <tr>
+            <td></td>
+            <td>   <a href="/pengguna/index">Kembali</a></td>
         </tr>
     </table>
     </form>
