@@ -7,8 +7,7 @@
 </head>
 <body>
     <center>
-        <a href="/pengguna/index">Log In Pengguna</a><br>
-        <a href="/lihatData/index">Lihat Data</a>
+        <a href="/admin/index">Log In Pengguna</a><br>
     </center>
     
 </body>

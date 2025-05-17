@@ -18,7 +18,7 @@ class TodoController extends Controller
         )
         ->get();
 
-        return view('pengguna.index', [
+        return view('admin.index', [
             'dataTodos' => $dataTodo
         ]);
     }
@@ -28,7 +28,7 @@ class TodoController extends Controller
         ->where('id', $id)
         ->get();
 
-        return view('pengguna.detailTugas', [
+        return view('admin.detailTugas', [
             'detailTugas' => $tugas
         ]);
     }
@@ -41,7 +41,7 @@ class TodoController extends Controller
         $dataTodos = DB::table('tb_todo')
         ->get();
 
-        return view('pengguna.index',[
+        return view('admin.index',[
             'dataTodos' => $dataTodos
         ]);
     }
@@ -52,7 +52,7 @@ class TodoController extends Controller
         $pelaksanaTugas = DB::table('tb_pegawai')
                         ->where('jabatan','!=', 'CEO')
                         ->get();
-        return view('pengguna.tambahTugas', [
+        return view('admin.tambahTugas', [
             'pemberiTugas' => $pemberiTugas,
             'pelaksanaTugas' => $pelaksanaTugas
         ]);

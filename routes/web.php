@@ -7,7 +7,7 @@ use App\Http\Controllers\TodoController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pengguna/index', [PenggunaController::class,'login']);
+Route::get('/admin/index', [PenggunaController::class,'login']);
 Route::get('/tugas/detailTugas/{id}',[TodoController::class,'detailTugas']);
 Route::get('/tugas/hapusTugas/{id}',[TodoController::class,'hapusTugas']);
 Route::get('/lihatData', [TodoController::class, 'tampilkanTodo']);

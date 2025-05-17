@@ -51,7 +51,7 @@
 
         @endforeach
     </table>
- <a href="/pengguna/index">Kembali</a>
+ <a href="/admin/index">Kembali</a>
  <a href="/tugas/ubahTugas">Ubah Tugas</a>
 </body>
 </html>

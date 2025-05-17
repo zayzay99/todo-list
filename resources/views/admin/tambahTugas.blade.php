@@ -56,7 +56,7 @@
         </tr>
         <tr>
             <td></td>
-            <td>   <a href="/pengguna/index">Kembali</a></td>
+            <td>   <a href="/admin/index">Kembali</a></td>
         </tr>
     </table>
     </form>

@@ -7,7 +7,7 @@ class PenggunaController extends Controller
 {
     public function login() {
         $todo = DB::table('tb_todo')->get();
-        return view('pengguna.index',[
+        return view('admin.index',[
             'dataTodos'=>$todo
         ]);
     }
