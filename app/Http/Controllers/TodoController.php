@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Todo;
 
 class TodoController extends Controller
 {
@@ -72,8 +73,24 @@ class TodoController extends Controller
         return "Penyimpanan berhasil!";
     }
 
-    public function ubahTugas(Request $request){
-        
-        return "Halaman UbahTugas NOT FOUND";
-    }
+    
+   public function updateTugas(Request $request, $id)
+{
+    $validated = $request->validate([
+        'tugas' => 'required|string|max:255',
+        'waktu_mulai' => 'required|date',
+        'waktu_selesai' => 'required|date|after_or_equal:waktu_mulai',
+        'tugas_dari' => 'nullable|string|max:255',
+        'tugas_untuk' => 'nullable|string|max:255',
+        'keterangan' => 'required|in:Dikerjakan,Selesai',
+        'notes' => 'nullable|string',
+    ]);
+
+    $todo = Todo::findOrFail($id);
+    $todo->update($validated);
+
+    return redirect()->back()->with('success', 'Tugas berhasil diperbarui.');
+    
 }
+    }
+//BANTUUU LAHHH PLIS AWOKAWOKAWOK
